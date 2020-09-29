@@ -1,26 +1,82 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { v4 as uuidv4 } from "uuid";
+import Form from "./components/Form";
+import ContactList from "./components/ContactList";
+import SearchInput from "./components/SearchInput";
+import styled from "styled-components";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Container = styled.div`
+  font-family: sans-serif;
+  font-size: 16px;
+`;
+
+uuidv4();
+
+export default class App extends Component {
+  state = {
+    contacts: [
+      { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
+      { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
+      { id: "id-3", name: "Eden Clements", number: "645-17-79" },
+      { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
+    ],
+    filter: "",
+  };
+
+  addContact = ({ name, number }) => {
+    const contact = {
+      id: uuidv4(),
+      name,
+      number,
+    };
+
+    if (
+      this.state.contacts.some(
+        (item) => item.name.toLowerCase() === contact.name.toLowerCase()
+      )
+    ) {
+      alert(`${name} is already in contacts`);
+    } else {
+      this.setState((prevState) => {
+        return { contacts: [...prevState.contacts, contact] };
+      });
+    }
+  };
+
+  filterContacts = (filter) => {
+    this.setState({
+      filter: filter.target.value,
+    });
+  };
+
+  getFilteredContacts = () => {
+    const { contacts, filter } = this.state;
+    return contacts.filter((contact) =>
+      contact.name.toLowerCase().includes(filter.toLowerCase())
+    );
+  };
+
+  deleteContact = (taskId) => {
+    const newCntacts = this.state.contacts.filter(
+      (contact) => contact.id !== taskId
+    );
+
+    this.setState({ contacts: newCntacts });
+  };
+
+  render() {
+    const { filter } = this.state;
+    const filteredContacts = this.getFilteredContacts();
+
+    return (
+      <Container>
+        <Form onSubmit={this.addContact} />
+        <SearchInput value={filter} onChangeSearchInput={this.filterContacts} />
+        <ContactList
+          contacts={filteredContacts}
+          onDeleteContact={this.deleteContact}
+        />
+      </Container>
+    );
+  }
 }
-
-export default App;
