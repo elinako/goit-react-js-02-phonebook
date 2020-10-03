@@ -4,13 +4,12 @@ import Form from "./components/Form";
 import ContactList from "./components/ContactList";
 import SearchInput from "./components/SearchInput";
 import styled from "styled-components";
+uuidv4();
 
 const Container = styled.div`
   font-family: sans-serif;
   font-size: 16px;
 `;
-
-uuidv4();
 
 export default class App extends Component {
   state = {

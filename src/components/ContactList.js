@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 uuidv4();
 
 const List = styled.ul`
@@ -29,6 +30,15 @@ const ContactList = ({ contacts, onDeleteContact }) => {
       </List>
     </>
   );
+};
+
+ContactList.defaultProps = {
+  name: "Name Surname",
+  number: "000-00-00",
+};
+ContactList.propTypes = {
+  contacts: PropTypes.array,
+  onDeleteContact: PropTypes.func,
 };
 
 export default ContactList;

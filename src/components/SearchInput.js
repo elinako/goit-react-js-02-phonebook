@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Input = styled.input`
   width: 400px;
@@ -19,3 +20,7 @@ export default function SearchInput({ value, onChangeSearchInput }) {
     </>
   );
 }
+
+SearchInput.propTypes = {
+  onChangeSearchInput: PropTypes.func,
+};
