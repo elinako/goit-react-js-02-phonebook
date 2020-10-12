@@ -81,20 +81,6 @@ export default class App extends Component {
     );
   }
 
-  componentDidMount() {
-    let values = Object.values(localStorage);
-    let apdatedValues = values.map(value => JSON.parse(value));
-    console.log(apdatedValues);
-  this.setState({contacts:apdatedValues})
-   
-  }
- 
 
-  componentDidUpdate(prevProps,prevState) {
-    this.state.contacts.map(contact=> localStorage.setItem(contact.id, JSON.stringify(contact)));
-
-    
-  
-  }
   
 }
