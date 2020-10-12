@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/goit-react-js-02-phonebook/static/js/main.df7e5b85.chunk.js",
-    "main.js.map": "/goit-react-js-02-phonebook/static/js/main.df7e5b85.chunk.js.map",
-    "runtime-main.js": "/goit-react-js-02-phonebook/static/js/runtime-main.4d5000ae.js",
-    "runtime-main.js.map": "/goit-react-js-02-phonebook/static/js/runtime-main.4d5000ae.js.map",
-    "static/js/2.221ccade.chunk.js": "/goit-react-js-02-phonebook/static/js/2.221ccade.chunk.js",
-    "static/js/2.221ccade.chunk.js.map": "/goit-react-js-02-phonebook/static/js/2.221ccade.chunk.js.map",
-    "index.html": "/goit-react-js-02-phonebook/index.html",
-    "precache-manifest.7fc9c764f6b4d98235a8ca8d959fde92.js": "/goit-react-js-02-phonebook/precache-manifest.7fc9c764f6b4d98235a8ca8d959fde92.js",
-    "service-worker.js": "/goit-react-js-02-phonebook/service-worker.js",
-    "static/js/2.221ccade.chunk.js.LICENSE.txt": "/goit-react-js-02-phonebook/static/js/2.221ccade.chunk.js.LICENSE.txt"
+    "main.js": "/goit-react-js-03-phonebook/static/js/main.2b7bc33f.chunk.js",
+    "main.js.map": "/goit-react-js-03-phonebook/static/js/main.2b7bc33f.chunk.js.map",
+    "runtime-main.js": "/goit-react-js-03-phonebook/static/js/runtime-main.375078b3.js",
+    "runtime-main.js.map": "/goit-react-js-03-phonebook/static/js/runtime-main.375078b3.js.map",
+    "static/js/2.26d47d7a.chunk.js": "/goit-react-js-03-phonebook/static/js/2.26d47d7a.chunk.js",
+    "static/js/2.26d47d7a.chunk.js.map": "/goit-react-js-03-phonebook/static/js/2.26d47d7a.chunk.js.map",
+    "index.html": "/goit-react-js-03-phonebook/index.html",
+    "precache-manifest.9330c3711d0eb1389ab4be71263b6038.js": "/goit-react-js-03-phonebook/precache-manifest.9330c3711d0eb1389ab4be71263b6038.js",
+    "service-worker.js": "/goit-react-js-03-phonebook/service-worker.js",
+    "static/js/2.26d47d7a.chunk.js.LICENSE.txt": "/goit-react-js-03-phonebook/static/js/2.26d47d7a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4d5000ae.js",
-    "static/js/2.221ccade.chunk.js",
-    "static/js/main.df7e5b85.chunk.js"
+    "static/js/runtime-main.375078b3.js",
+    "static/js/2.26d47d7a.chunk.js",
+    "static/js/main.2b7bc33f.chunk.js"
   ]
 }
