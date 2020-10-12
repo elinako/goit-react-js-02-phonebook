@@ -22,6 +22,8 @@ export default class App extends Component {
     filter: "",
   };
 
+
+  
   addContact = ({ name, number }) => {
     const contact = {
       id: uuidv4(),
@@ -56,11 +58,11 @@ export default class App extends Component {
   };
 
   deleteContact = (taskId) => {
-    const newCntacts = this.state.contacts.filter(
+    const newContacts = this.state.contacts.filter(
       (contact) => contact.id !== taskId
     );
 
-    this.setState({ contacts: newCntacts });
+    this.setState({ contacts: newContacts });
   };
 
   render() {
@@ -78,4 +80,21 @@ export default class App extends Component {
       </Container>
     );
   }
+
+  componentDidMount() {
+    let values = Object.values(localStorage);
+    let apdatedValues = values.map(value => JSON.parse(value));
+    console.log(apdatedValues);
+  this.setState({contacts:apdatedValues})
+   
+  }
+ 
+
+  componentDidUpdate(prevProps,prevState) {
+    this.state.contacts.map(contact=> localStorage.setItem(contact.id, JSON.stringify(contact)));
+
+    
+  
+  }
+  
 }
