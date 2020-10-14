@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-js-02-phonebook",
+  "name": "goit-react-js-03-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://elinako.github.io/goit-react-js-02-phonebook/",
+  "homepage": "https://elinako.github.io/goit-react-js-03-phonebook/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -10,7 +10,7 @@
     "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^3.4.3",
     "styled-components": "^5.2.0",
     "uuid": "^8.3.0"
   },
